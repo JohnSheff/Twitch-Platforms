@@ -1,0 +1,26 @@
+{
+  "name": "solo_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "debug": "latest",
+    "express": "^4.17.1",
+    "handlebars": "^4.0.12",
+    "hbs": "~4.0.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^1.19.4",
+    "shards-ui": "^3.0.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0"
+  }
+}

@@ -1,0 +1,47 @@
+<h1 class="text-center">{{name}} Streams</h1>
+
+<h3 class="text-center">
+    <strong class="text-primary">{{totalViewers}}</strong> people currently
+    watching {{name}}
+</h3>
+<div>
+    <div class="row">
+        {{#each stream}}
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+                <div class="card">
+<!--                    <img class="card-img-top" src={{thumbnail_url}} alt="url"/>-->
+                    <div id="{{id}}"></div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{user_name}}</h5>
+                        <h6 class="card-text">{{title}}</h6>
+                        <div class="card-text">
+                            {{viewer_count}} live viewers
+                        </div>
+                        <button class="btn btn-success">
+                            <a class="link text-light"
+                               href="https://twitch.tv/{{user_name}}"
+                               target="_blank">
+                                watch {{user_name}}'s channel
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
+
+<script >
+        {{#each stream}}
+        let options{{id}} = {
+            width: "100%",
+            height: 300,
+            channel: "{{user_name}}",
+            layout: "video",
+            autoplay: false
+        };
+        let player{{id}} = new Twitch.Player("{{id}}", options{{id}});
+        player{{id}}.setVolume(0.5);
+        {{/each}}
+</script>
