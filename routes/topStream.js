@@ -25,7 +25,7 @@ router.route ('/')
    const gameNameArray = await gameNames.json ();
    
    let finalArray = dataStream.data.map (stream => {
-     stream.gameName = '';git remote add origin git@github.com:JohnSheff/Twitch-Platforms.git
+     stream.gameName = '';
      gameNameArray.data.map (name => {
        if (stream.game_id === name.id) {
          return (stream.gameName = name.name);
