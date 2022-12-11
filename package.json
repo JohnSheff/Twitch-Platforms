@@ -11,7 +11,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "debug": "latest",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "handlebars": "^4.0.12",
     "hbs": "~4.0.1",
     "materialize-css": "^1.0.0-rc.2",
